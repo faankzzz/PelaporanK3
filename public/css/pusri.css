@@ -1,0 +1,222 @@
+/* PT Pupuk Sriwidjaja Palembang - Tema Sistem Manajemen K3 (SMK3) */
+:root {
+    --pusri-primary: #004b87;
+    --pusri-primary-dark: #003362;
+    --pusri-accent: #f5a623;
+    --pusri-accent-hover: #df9318;
+    --pusri-bg: #f5f7fa;
+    --pusri-card: #ffffff;
+    --pusri-border: #dde3ea;
+    --pusri-text-dark: #1e293b;
+    --pusri-text-muted: #64748b;
+}
+
+body {
+    background-color: var(--pusri-bg);
+    color: var(--pusri-text-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.925rem;
+    min-height: 100vh;
+}
+
+/* Navigasi Utama */
+.navbar-pusri {
+    background-color: var(--pusri-primary-dark);
+    border-bottom: 3px solid var(--pusri-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-pusri .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.2px;
+}
+
+.navbar-pusri .navbar-brand small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ffd27f;
+    letter-spacing: 0.3px;
+    margin-top: -2px;
+}
+
+.navbar-pusri .nav-link {
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 4px;
+}
+
+.navbar-pusri .nav-link:hover,
+.navbar-pusri .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Kartu Standar */
+.card-pusri {
+    background-color: var(--pusri-card);
+    border: 1px solid var(--pusri-border);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card-pusri .card-header {
+    background-color: #fafbfc;
+    border-bottom: 1px solid var(--pusri-border);
+    font-weight: 600;
+    color: var(--pusri-primary-dark);
+    padding: 0.75rem 1rem;
+    font-size: 0.925rem;
+}
+
+.card-pusri .card-header.header-accent {
+    border-left: 3px solid var(--pusri-primary);
+}
+
+/* Tombol */
+.btn-pusri {
+    background-color: var(--pusri-primary);
+    color: #ffffff;
+    border: 1px solid var(--pusri-primary-dark);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+}
+
+.btn-pusri:hover {
+    background-color: var(--pusri-primary-dark);
+    color: #ffffff;
+}
+
+.btn-pusri-yellow {
+    background-color: var(--pusri-accent);
+    color: #002b54;
+    border: 1px solid #d98e16;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+}
+
+.btn-pusri-yellow:hover {
+    background-color: var(--pusri-accent-hover);
+    color: #002b54;
+}
+
+/* Kartu Statistik */
+.stat-card-pusri {
+    background: #ffffff;
+    border: 1px solid var(--pusri-border);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    border-top: 3px solid var(--pusri-primary);
+}
+
+.stat-card-pusri.stat-yellow {
+    border-top-color: var(--pusri-accent);
+}
+
+.stat-card-pusri.stat-green {
+    border-top-color: #16a34a;
+}
+
+.stat-card-pusri.stat-cyan {
+    border-top-color: #0284c7;
+}
+
+/* Kotak Kamera Praktis */
+.camera-container {
+    background: #111827;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #374151;
+}
+
+.camera-viewfinder {
+    width: 100%;
+    max-height: 360px;
+    background: #000000;
+    object-fit: cover;
+    display: block;
+}
+
+.camera-overlay {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.camera-badge {
+    background: rgba(17, 24, 39, 0.85);
+    color: #ffffff;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.725rem;
+    font-weight: 500;
+    border: 1px solid #4b5563;
+}
+
+.camera-controls {
+    padding: 0.75rem 1rem;
+    background: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-capture {
+    background-color: #ffffff;
+    color: #111827;
+    border: 2px solid var(--pusri-accent);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.5rem 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.btn-capture:hover {
+    background-color: #fef3c7;
+}
+
+.captured-preview-box {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #16a34a;
+    background: #000;
+}
+
+.watermark-banner {
+    background-color: #003362;
+    color: #ffffff;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    border-bottom: 2px solid var(--pusri-accent);
+}
+
+/* Banner Identitas & Waktu Otomatis */
+.autofill-banner {
+    background-color: #f0f7fc;
+    border: 1px solid #cbdfe9;
+    border-left: 3px solid var(--pusri-primary);
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+}
